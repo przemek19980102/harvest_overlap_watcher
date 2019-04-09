@@ -1,0 +1,19 @@
+{
+      "name": "Codequest harvest watcher",
+      "version": "1.0",
+      "manifest_version": 2,
+      "icons": { "16": "icon_16.png",
+           "48": "icon_48.png",
+          "128": "icon_128.png" },
+      "background": {
+      	"scripts": ["script.js"],
+      	"persistent": true
+      },
+      "permissions": ["tabs", "*://codequest.harvestapp.com/time*"],
+      "content_scripts": [
+        {
+      	  "matches": ["*://codequest.harvestapp.com/time*"],
+	         "js": ["script.js"]
+    	}
+  ]
+}
